@@ -1,9 +1,3 @@
-#!/bin/bash
-# Pullling docker image from docker hub
-docker pull
-# To explore images available on docker hub, you can use for example
-docker search ubuntu
-# Example Dockerfile
 # Use the official NGINX base image
 FROM nginx:latest
 
