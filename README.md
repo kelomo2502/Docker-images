@@ -49,3 +49,16 @@ To build an image from this Dockerfile, navigate to the directory containing the
 
 To run the image
 `docker run -p 8080:80 dockerfile`
+Create the index.html file in thesame directory as the dockerfile
+`echo "Welcome to Darey.io" >> index.html`
+To run the container
+`docker run -p 8080:80 dockerfile`
+
+Running the command above will create a container that listens on port 8080 using the nginx image you created earlier. So you need to create a new rule in security group of the EC2 instance to all a custom port 8080 from anywhere for instance
+
+check the list of container available
+`docker ps -a`
+Start the container using:
+`docker start CONTAINER_ID`
+Accessing the website:
+Now that we have started our container, we can access the content on our web browser with http://publicip_adderss:8080
